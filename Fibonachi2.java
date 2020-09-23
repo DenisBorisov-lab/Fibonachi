@@ -1,17 +1,19 @@
-package PiNumber;
-
 import java.util.Scanner;
 
-public class Fibonachi2 {
+public class Fibonachi {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
+        int result = 0;
         int f = 1;
         int s = 2;
-        int result = 0;
-        if((number == 1) || (number == 2)){
+        if (number == 1){
             System.out.println(1);
-        }else{
+        }
+        else if (number == 2) {
+            System.out.println(2);
+        }
+        else {
             for (int i = 3; i <= number; i++){
                 result = f + s;
                 f = s;
@@ -19,6 +21,5 @@ public class Fibonachi2 {
             }
             System.out.println(result);
         }
-
     }
 }
